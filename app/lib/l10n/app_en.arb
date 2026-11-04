@@ -1,0 +1,487 @@
+{
+  "@@locale": "en",
+  "tmdbLanguage": "en-US",
+  "@tmdbLanguage": {
+    "description": "TMDB `language` parameter used for catalog requests in this UI language."
+  },
+  "navHome": "HOME",
+  "navSearch": "SEARCH",
+  "navSettings": "SETTINGS",
+  "cancel": "Cancel",
+  "retry": "Retry",
+  "remove": "Remove",
+  "statusOk": "OK",
+  "statusError": "Error",
+  "quoted": "“{text}”",
+  "@quoted": {
+    "placeholders": {
+      "text": {
+        "type": "String"
+      }
+    }
+  },
+  "badgeSeries": "Series",
+  "routerAddress": "Router address",
+  "byteUnits": "B KB MB GB TB",
+  "@byteUnits": {
+    "description": "Space-separated size units, smallest first."
+  },
+  "perSecond": "{size}/s",
+  "@perSecond": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "seconds": "{value} s",
+  "@seconds": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "errorTmdbNotConfigured": "TMDB is not configured: set the key in Settings → Catalog and search",
+  "errorTmdbKeyRejected": "TMDB rejected the key: check it in Settings → Catalog and search",
+  "errorServerMessage": "Server error ({code}): {message}",
+  "@errorServerMessage": {
+    "placeholders": {
+      "code": {
+        "type": "int"
+      },
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "errorServerCode": "Server error: {code}",
+  "@errorServerCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "errorServerSlow": "The server takes too long to respond",
+  "errorServerUnreachable": "No connection to the server",
+  "connectSearching": "Looking for the server on the router…",
+  "connectNoResponse": "The server does not respond at this address",
+  "connectNotFound": "Server not found",
+  "connectNotFoundHint": "Make sure the container on the router is running and this device is on the home network. Or enter the router address.",
+  "connectSearchAgain": "Search again",
+  "connectAddressHint": "192.168.88.1 or https://… (port {port} by default)",
+  "@connectAddressHint": {
+    "placeholders": {
+      "port": {
+        "type": "int"
+      }
+    }
+  },
+  "connectButton": "Connect",
+  "homeTrending": "Trending",
+  "homeNowPlaying": "Now in theaters",
+  "homePopularMovies": "Popular movies",
+  "homePopularTv": "Popular TV shows",
+  "homeTopMovies": "Top rated movies",
+  "homeTopTv": "Top rated TV shows",
+  "homeContinue": "Continue watching",
+  "homeRemoveTitle": "Remove from “Continue watching”?",
+  "searchHint": "Movie or TV show",
+  "searchEnterTitle": "Enter a title",
+  "searchNothingFound": "Nothing found",
+  "detailsMinutes": "{count} min",
+  "@detailsMinutes": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "detailsSeasons": "{count, plural, one{1 season} other{{count} seasons}}",
+  "@detailsSeasons": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "detailsWatch": "Watch",
+  "detailsContinue": "Continue: {name}",
+  "@detailsContinue": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "detailsOverview": "Overview",
+  "detailsCast": "Cast",
+  "releasesSortSeeders": "By seeders",
+  "releasesSortSize": "By size",
+  "releasesSortDate": "By date",
+  "releasesQueryHint": "Custom tracker query",
+  "releasesSort": "Sort",
+  "releasesQuality": "Quality",
+  "releasesQualityAny": "Any",
+  "releasesSearching": "Searching trackers for releases…",
+  "releasesNotFound": "No releases found.\nTry another query or enable more trackers.",
+  "releasesIndexersAnswered": "Trackers: {ok} of {total} responded",
+  "@releasesIndexersAnswered": {
+    "placeholders": {
+      "ok": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "releasesIndexersFailed": "not responding: {names}",
+  "@releasesIndexersFailed": {
+    "placeholders": {
+      "names": {
+        "type": "String"
+      }
+    }
+  },
+  "filesTitle": "Files",
+  "filesConnectingPeers": "Connecting to peers…",
+  "filesFetchingList": "Fetching the file list from peers…",
+  "filesAddFailed": "The server could not add the release",
+  "filesNoPeers": "Could not get the file list: no peers",
+  "playOpenWith": "Open with?",
+  "playBuiltInPlayer": "Built-in player",
+  "playExternalPlayer": "External player",
+  "playerModeInternal": "Built-in",
+  "playerModeExternal": "External (VLC, MX Player…)",
+  "playerModeAsk": "Ask every time",
+  "playerAudioTrack": "Audio track",
+  "playerSubtitles": "Subtitles",
+  "playerSubtitlesOff": "Off",
+  "playerTrack": "Track {id}",
+  "@playerTrack": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "playerNoTracks": "No tracks",
+  "playerPeers": "{speed} · peers {peers}",
+  "@playerPeers": {
+    "placeholders": {
+      "speed": {
+        "type": "String"
+      },
+      "peers": {
+        "type": "String"
+      }
+    }
+  },
+  "playerPause": "Pause",
+  "playerPlay": "Play",
+  "playerAudio": "Audio",
+  "playerNext": "Next",
+  "settingsTitle": "Settings",
+  "settingsServer": "Server",
+  "settingsServerAddress": "Server address",
+  "settingsConnect": "Connect",
+  "settingsNotConnected": "not connected",
+  "settingsTorrents": "Torrents",
+  "settingsTorrentsOk": "torrent playback",
+  "settingsTorrentsOff": "torrent engine is not running",
+  "settingsIndexers": "Trackers",
+  "settingsIndexersCount": "{enabled} of {total} enabled",
+  "@settingsIndexersCount": {
+    "placeholders": {
+      "enabled": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsTmdbOk": "movie catalog",
+  "settingsTmdbOff": "no key — set it in Catalog and search",
+  "settingsPlayer": "Player",
+  "settingsLanguage": "Language",
+  "languageSystem": "Device language",
+  "save": "Save",
+  "saved": "Saved",
+  "on": "On",
+  "off": "Off",
+  "connectConnectingTo": "Connecting to {address}…",
+  "@connectConnectingTo": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "connectSavedNotResponding": "The server {address} does not respond. Make sure it is running and this device is on the same network, or choose another server.",
+  "@connectSavedNotResponding": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "connectSearchAuto": "Search automatically",
+  "releasesNoIndexers": "No trackers are enabled.",
+  "releasesSetUpIndexers": "Set up trackers",
+  "settingsChangeServer": "Change server",
+  "settingsChangeServerHint": "Enter the address of another plenka-server",
+  "settingsServerManual": "set manually",
+  "settingsServerAuto": "found automatically",
+  "settingsFindAuto": "Find the server automatically",
+  "settingsServerSettings": "Server settings",
+  "settingsCatalog": "Catalog and search",
+  "settingsCatalogHint": "TMDB key, search timeout, FlareSolverr",
+  "settingsEngine": "Torrent engine",
+  "settingsEngineHint": "Cache, connections, speed limits, protocols",
+  "settingsIndexersHint": "Enable trackers, logins, definitions",
+  "catalogTmdbKey": "TMDB API key",
+  "catalogTmdbKeyHint": "v3 API key or v4 token",
+  "catalogTmdbKeySet": "The key is set. Enter a new one to replace it.",
+  "catalogTmdbKeyRemove": "Remove key",
+  "catalogTmdbKeyRemoved": "Key removed",
+  "catalogSearchTimeout": "Tracker search timeout, s",
+  "catalogFlareSolverr": "FlareSolverr address",
+  "catalogFlareSolverrHint": "For trackers behind a Cloudflare check, e.g. http://192.168.88.1:8191. Empty — off.",
+  "engineCacheSize": "Cache size, MB",
+  "engineReadAhead": "Read-ahead, %",
+  "enginePreload": "Preload to disk, % of every file",
+  "engineConnections": "Connection limit",
+  "engineDownLimit": "Download limit, KB/s (0 — unlimited)",
+  "engineUpLimit": "Upload limit, KB/s (0 — unlimited)",
+  "engineDisconnect": "Unload an idle torrent after, s",
+  "enginePort": "Incoming port (0 — random)",
+  "engineRetrackers": "Retrackers",
+  "engineRetrackersNone": "Leave",
+  "engineRetrackersAdd": "Add",
+  "engineRetrackersRemove": "Remove",
+  "engineRetrackersReplace": "Replace",
+  "engineUseDisk": "Keep the cache on disk",
+  "engineSavePath": "Downloads folder (empty: the data folder)",
+  "engineRemoveCacheOnDrop": "Delete the cache when a torrent is unloaded",
+  "engineUpload": "Upload (seed)",
+  "engineEncrypt": "Encrypted connections only",
+  "engineResponsive": "Responsive mode (read without piece checks)",
+  "engineDebug": "Debug log",
+  "engineReset": "Reset to defaults",
+  "engineResetConfirm": "Reset the torrent engine settings to their defaults?",
+  "engineResetDone": "Settings reset",
+  "engineRestartHint": "The engine restarts after saving; playing torrents reconnect.",
+  "indexersSearch": "Find a tracker",
+  "indexersAll": "All",
+  "indexersEnabled": "Enabled",
+  "indexersPublic": "Public",
+  "indexersPrivate": "Private",
+  "indexersTypePublic": "public",
+  "indexersTypeSemi": "semi-private",
+  "indexersTypePrivate": "private",
+  "indexersNeedsSetup": "needs setup",
+  "indexersError": "error",
+  "indexersEmpty": "No trackers found",
+  "indexersCounter": "{enabled} of {total} enabled",
+  "@indexersCounter": {
+    "placeholders": {
+      "enabled": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "indexersDefinitions": "Tracker definitions",
+  "indexersDefinitionsInfo": "Loaded: {count} · updated {date}",
+  "@indexersDefinitionsInfo": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "indexersDefinitionsNever": "Loaded: {count} · not updated yet",
+  "@indexersDefinitionsNever": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "indexersDefinitionsUpdate": "Update definitions",
+  "indexersDefinitionsUpdating": "Definitions are downloading…",
+  "indexersDefinitionsUpdated": "Definitions updated: {count}",
+  "@indexersDefinitionsUpdated": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "indexersDefinitionsFailed": "The last update failed: {error}",
+  "@indexersDefinitionsFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "indexersDefinitionsEmpty": "The server has no tracker definitions yet. Press “Update definitions” to download them.",
+  "indexerEnabled": "Tracker enabled",
+  "indexerSiteLink": "Site address",
+  "indexerCustomLink": "Custom address",
+  "indexerSettings": "Settings",
+  "indexerNoSettings": "This tracker has no settings",
+  "indexerPasswordSet": "set — leave empty to keep it",
+  "indexerTest": "Test",
+  "indexerTestOk": "Works: {results} results in {ms} ms",
+  "@indexerTestOk": {
+    "placeholders": {
+      "results": {
+        "type": "int"
+      },
+      "ms": {
+        "type": "int"
+      }
+    }
+  },
+  "indexerTestFail": "Error: {error}",
+  "@indexerTestFail": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "indexerLastError": "Last error",
+  "indexerSaved": "Tracker settings saved",
+  "settingsVideoOutput": "Video output",
+  "videoOutputHardware": "Hardware — MediaCodec (HDR, faster)",
+  "videoOutputHardwareHint": "Decodes straight to the screen: 10-bit, HDR10, HDR10+ and Dolby Vision",
+  "videoOutputCompatible": "Compatible — OpenGL",
+  "videoOutputCompatibleHint": "Try it if the picture is black, glitchy or does not start",
+  "playerVideoOutputHint": "Playback problem? Try Settings → Video output → Compatible — OpenGL",
+  "watchTorrents": "Torrents",
+  "watchTorrentsHint": "Find a release on the trackers",
+  "watchTrailers": "Trailers",
+  "watchTrailersHint": "Trailers and videos on YouTube",
+  "trailersTitle": "Trailers",
+  "trailersLoading": "Loading videos…",
+  "trailersEmpty": "No trailers",
+  "trailersOpenFailed": "Could not open YouTube: {error}",
+  "@trailersOpenFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "preload": "Preload",
+  "preloadStarted": "Preload started: {name}",
+  "@preloadStarted": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "preloadProgress": "Preload: {done} / {total}",
+  "@preloadProgress": {
+    "placeholders": {
+      "done": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "downloadAll": "Download in full",
+  "downloadAllCancel": "Cancel full download",
+  "downloadAllStarted": "Full download started — the torrent stays on the server's disk",
+  "downloadAllCancelled": "Full download cancelled",
+  "downloadAllNoRoom": "The torrent does not fit: the server disk lacks free space",
+  "downloadAllProgress": "In full: {done} / {total}",
+  "@downloadAllProgress": {
+    "placeholders": {
+      "done": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "downloadAllDone": "Downloaded in full: {total}",
+  "@downloadAllDone": {
+    "placeholders": {
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "navTorrents": "TORRENTS",
+  "torrentsTitle": "Torrents",
+  "torrentsAdd": "Add",
+  "torrentsAddTitle": "Add a torrent",
+  "torrentsLink": "Magnet, .torrent link or hash",
+  "torrentsTitleField": "Title (optional)",
+  "torrentsAdded": "Torrent added",
+  "torrentsEmpty": "No torrents. Add a release from search or by a magnet link.",
+  "torrentsDrop": "Unload from memory",
+  "torrentsDropped": "Unloaded from memory",
+  "torrentsDelete": "Delete",
+  "torrentsDeleteConfirm": "Delete “{title}” from the torrent list?",
+  "@torrentsDeleteConfirm": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "torrentsDeleted": "Torrent deleted",
+  "torrentsDetails": "Details",
+  "torrentsStatus": "Status",
+  "torrentsSize": "Size",
+  "torrentsLoaded": "Loaded",
+  "torrentsSpeedDown": "Download",
+  "torrentsSpeedUp": "Upload",
+  "torrentsPeers": "Peers",
+  "torrentsSeeders": "Seeders",
+  "torrentsFull": "Full",
+  "torrentsFullDone": "Downloaded in full",
+  "torrentsHash": "Hash",
+  "torrentsHashCopied": "Hash copied",
+  "torrentsAddedAt": "Added",
+  "torrentsCache": "Cache",
+  "torrentsCacheSummary": "Filled {filled} / {capacity} · pieces: {count} · piece size {pieceSize}",
+  "@torrentsCacheSummary": {
+    "placeholders": {
+      "filled": {
+        "type": "String"
+      },
+      "capacity": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      },
+      "pieceSize": {
+        "type": "String"
+      }
+    }
+  },
+  "torrentsNoCache": "The cache is empty — the torrent is not active",
+  "torrentsLegendDone": "loaded",
+  "torrentsLegendPartial": "partial",
+  "torrentsLegendQueued": "queued",
+  "torrentsLegendReader": "reading"
+}

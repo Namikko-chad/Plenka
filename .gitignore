@@ -1,0 +1,22 @@
+# Build outputs
+/dist/
+bin/
+*.test
+*.out
+coverage.*
+
+# Local data / env
+/data/
+.env*
+!.env.example
+
+# Editors
+.idea/
+.vscode/
+*.iml
+.DS_Store
+CLAUDE.md
+
+# Design
+DESIGN_MANIFEST.md
+DESIGN_SPECIFICATION.md

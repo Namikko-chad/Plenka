@@ -1,0 +1,5 @@
+bin/
+data/
+# Built web app, copied here by `make web`; only the placeholder is tracked.
+web/dist/*
+!web/dist/.gitkeep

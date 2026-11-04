@@ -1,0 +1,79 @@
+/* Design tokens — the single source of truth for colours, radii, sizes and layers.
+   rgba() literals elsewhere use the rgb triple of a token (commented). */
+:root {
+  /* palette */
+  --c-bg: #080c10;
+  --c-surface: #0d1117;
+  --c-border: #1c2333;
+  --c-accent: #00d4ff;
+  --c-text: #e6edf3;
+  --c-muted: #8b949e;
+  --c-on-accent: #0a0e17;
+
+  /* status */
+  --c-ok: #10b981;
+  --c-error: #ef4444;
+  --c-active: #3b82f6;
+  --c-neutral: #6b7280;
+  --c-warning: #f59e0b;
+  --c-purple: #7c3aed;
+  --c-purple-l: #a78bfa;
+
+  /* rgb triples for alpha layering */
+  --rgb-accent: 0, 212, 255;
+  --rgb-ok: 16, 185, 129;
+  --rgb-error: 239, 68, 68;
+  --rgb-warning: 245, 158, 11;
+  --rgb-neutral: 107, 114, 128;
+  --rgb-active: 59, 130, 246;
+  --rgb-purple: 124, 58, 237;
+  --rgb-bg: 8, 12, 16;
+
+  /* alpha scale (hover = rest + 0.10) */
+  --a-grid: 0.03;
+  --a-ghost: 0.1;
+  --a-ghost-hover: 0.2;
+  --a-badge: 0.15;
+  --a-segment: 0.12;
+  --a-line: 0.3;
+
+  /* radii */
+  --r-badge: 4px;
+  --r-segment: 6px;
+  --r-control: 8px;
+  --r-card: 12px;
+  --r-dialog: 14px;
+
+  /* typography */
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --font-display: 'Syne', 'JetBrains Mono', ui-monospace, monospace;
+
+  /* sizes */
+  --control-h: 30px;
+  --touch: 44px;
+  --tabbar-h: 60px;
+  --rail-w: 88px;
+  --appbar-h: 56px;
+  --gutter: 16px;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+
+  /* layers */
+  --z-grid: 0;
+  --z-page: 1;
+  --z-appbar: 10;
+  --z-nav: 20;
+  --z-overlay: 100;
+  --z-dialog: 110;
+
+  --dur: 0.15s;
+  --dur-page: 0.26s;
+}
+
+@media (min-width: 840px) {
+  :root {
+    --gutter: 28px;
+  }
+}

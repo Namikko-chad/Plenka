@@ -1,0 +1,16 @@
+{
+  "name": "Plenka",
+  "short_name": "Plenka",
+  "description": "Movies and TV shows over torrents",
+  "lang": "ru",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#080C10",
+  "theme_color": "#080C10",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

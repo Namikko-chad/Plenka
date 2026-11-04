@@ -1,0 +1,30 @@
+# Local run of the whole stack in one container: http://localhost:8095
+services:
+  plenka:
+    build: .
+    image: plenka-server:local
+    ports:
+      - "8095:8095"
+    # The mobile app finds the server by UDP broadcast, which doesn't reach a bridge
+    # container. On Linux, to be discoverable on the LAN, use the host network instead
+    # of `ports`:
+    # network_mode: host
+    environment:
+      TMDB_KEY: ${TMDB_KEY:-}
+    volumes:
+      - plenka-data:/data
+    restart: unless-stopped
+
+  # Optional: FlareSolverr for trackers behind a Cloudflare check (e.g. RuTracker.org).
+  # Uncomment, then set http://flaresolverr:8191 in Settings -> FlareSolverr address.
+  # That name resolves only inside this compose project: with network_mode: host, a
+  # separate `docker run` or a router, publish the port and use the host's LAN address
+  # (http://<host IP>:8191).
+  # flaresolverr:
+  #   image: ghcr.io/flaresolverr/flaresolverr:latest
+  #   ports:
+  #     - "8191:8191"
+  #   restart: unless-stopped
+
+volumes:
+  plenka-data:

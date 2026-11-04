@@ -1,0 +1,9 @@
+.git
+dist
+data
+app
+tmpdata
+**/node_modules
+frontend/dist
+backend/bin
+backend/data

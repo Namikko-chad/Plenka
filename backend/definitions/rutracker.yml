@@ -1,0 +1,143 @@
+---
+# Plenka's own definition for RuTracker.org (the downloaded set only has the
+# unrelated rutracker.ru). Search and downloads need an account.
+id: rutracker
+name: RuTracker.org
+description: "RuTracker.org is a RUSSIAN Semi-Private Torrent Tracker for MOVIES / TV / GENERAL"
+language: ru-RU
+type: semi-private
+encoding: windows-1251
+links:
+  - https://rutracker.org/
+  - https://rutracker.net/
+  - https://rutracker.nl/
+
+caps:
+  # The site has hundreds of forums; the category is derived from words in the
+  # forum name (see the category field), so these ids are words, not forum ids.
+  categorymappings:
+    - {id: movies, cat: Movies, desc: "Фильмы"}
+    - {id: movies-hd, cat: Movies/HD, desc: "Фильмы HD"}
+    - {id: movies-uhd, cat: Movies/UHD, desc: "Фильмы UHD"}
+    - {id: movies-dvd, cat: Movies/DVD, desc: "Фильмы DVD"}
+    - {id: tv, cat: TV, desc: "Сериалы"}
+    - {id: tv-hd, cat: TV/HD, desc: "Сериалы HD"}
+    - {id: tv-uhd, cat: TV/UHD, desc: "Сериалы UHD"}
+    - {id: anime, cat: TV/Anime, desc: "Аниме"}
+    - {id: documentary, cat: TV/Documentary, desc: "Документальное"}
+    - {id: sport, cat: TV/Sport, desc: "Спорт"}
+    - {id: music, cat: Audio, desc: "Музыка"}
+    - {id: lossless, cat: Audio/Lossless, desc: "Музыка (lossless)"}
+    - {id: audiobook, cat: Audio/Audiobook, desc: "Аудиокниги"}
+    - {id: books, cat: Books, desc: "Книги"}
+    - {id: games, cat: PC/Games, desc: "Игры"}
+    - {id: software, cat: PC, desc: "Программы"}
+    - {id: other, cat: Other, desc: "Другое"}
+  modes:
+    search: [q]
+    tv-search: [q, season, ep]
+    movie-search: [q]
+
+settings:
+  - name: username
+    type: text
+    label: Username
+  - name: password
+    type: password
+    label: Password
+
+login:
+  path: forum/login.php
+  method: post
+  inputs:
+    login_username: "{{ .Config.username }}"
+    login_password: "{{ .Config.password }}"
+    login: "вход"
+  error:
+    - selector: input[name="cap_sid"]
+      message:
+        text: "RuTracker asks for a captcha: log in once at the site in a browser, then try again"
+    - selector: h4.warnColor1
+  test:
+    path: forum/index.php
+    selector: "#logged-in-username"
+
+search:
+  paths:
+    - path: forum/tracker.php
+  inputs:
+    nm: "{{ .Keywords }}"
+  rows:
+    selector: "#tor-tbl tr.hl-tr"
+  fields:
+    category:
+      selector: a.f
+      filters:
+        - name: tolower
+        - name: re_replace
+          args: ["^.*аниме.*$", "anime"]
+        - name: re_replace
+          args: ["^.*документал.*$", "documentary"]
+        - name: re_replace
+          args: ["^.*(спорт|футбол|хоккей|баскетбол|теннис|формула).*$", "sport"]
+        - name: re_replace
+          args: ["^(?=.*сериал)(?=.*(uhd|4k|2160)).*$", "tv-uhd"]
+        - name: re_replace
+          args: ["^(?=.*сериал)(?=.*(hd|1080|720)).*$", "tv-hd"]
+        - name: re_replace
+          args: ["^.*сериал.*$", "tv"]
+        - name: re_replace
+          args: ["^(?=.*(фильм|кино))(?=.*(uhd|4k|2160)).*$", "movies-uhd"]
+        - name: re_replace
+          args: ["^(?=.*(фильм|кино))(?=.*(hd|1080|720)).*$", "movies-hd"]
+        - name: re_replace
+          args: ["^(?=.*(фильм|кино))(?=.*dvd).*$", "movies-dvd"]
+        - name: re_replace
+          args: ["^.*(фильм|кино).*$", "movies"]
+        - name: re_replace
+          args: ["^.*аудиокниг.*$", "audiobook"]
+        - name: re_replace
+          args: ["^.*(lossless|flac).*$", "lossless"]
+        - name: re_replace
+          args: ["^.*(музык|mp3|концерт).*$", "music"]
+        - name: re_replace
+          args: ["^.*(книг|литератур|журнал|комикс).*$", "books"]
+        - name: re_replace
+          args: ["^.*игр.*$", "games"]
+        - name: re_replace
+          args: ["^.*(программ|windows|linux|macos|софт).*$", "software"]
+        - name: re_replace
+          args: ["^(?!(movies|movies-hd|movies-uhd|movies-dvd|tv|tv-hd|tv-uhd|anime|documentary|sport|music|lossless|audiobook|books|games|software)$).*$", "other"]
+    description:
+      selector: a.f
+    title:
+      selector: a.tLink
+    details:
+      selector: a.tLink
+      attribute: href
+    # closed or not yet checked releases have no download link: the row is skipped
+    download:
+      selector: a.tr-dl
+      attribute: href
+    size:
+      selector: td.tor-size
+      attribute: data-ts_text
+    seeders:
+      selector: b.seedmed
+      optional: true
+      default: 0
+    leechers:
+      selector: td.leechmed
+      optional: true
+      default: 0
+    grabs:
+      selector: td.number-format
+      optional: true
+      default: 0
+    date:
+      selector: td:last-child
+      attribute: data-ts_text
+    downloadvolumefactor:
+      text: 1
+    uploadvolumefactor:
+      text: 1
